@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  direction: rtl;
+  font-family: "Tajawal", sans-serif;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 64%,
+    rgba(243, 243, 243, 1) 100%
+  );
+}
+.con {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 50px 90px 1fr 100px;
+  grid-template-areas:
+    "search search search search search search search search search search"
+    "header header header header header header header header header header"
+    "content content content content content content content content content content"
+    "footer footer footer footer footer footer footer footer footer footer";
+}
+/*
+ ========    start search
+ */
+.search {
+  grid-area: search;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.search input {
+  padding: 10px;
+  width: 490px;
+  font-size: 18px;
+  font-family: "Tajawal", sans-serif;
+  color: #fff;
+  border: none;
+  align-self: center;
+  border-bottom: 2px solid #92d6ff;
+  background-color: transparent;
+}
+.search::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f002";
+  position: absolute;
+  left: 1px;
+  align-self: center;
+  color: #92d6ff;
+  width: 50px;
+  height: 10px;
+}
+.search input:focus-visible {
+  outline: none;
+}
+/*
+ ========    End search
+
+ ========    Start header
+ */
+header {
+  grid-area: header;
+  display: flex;
+  background-color: #f3f3f3;
+  justify-content: space-evenly;
+  align-items: center;
+}
+header .start {
+}
+header .start img {
+  width: 50px;
+  display: inline;
+}
+header .start h3 {
+  display: inline-block;
+}
+header .end {
+}
+header .end ul {
+  list-style-type: none;
+}
+header .end ul li {
+  display: inline-block;
+  margin: 10px;
+  background-color: #333;
+  padding: 10px 15px;
+}
+header .end ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+header .end ul li.active {
+  color: #fff;
+  background-color: #92d6ff;
+  box-shadow: 3px 3px 0 1px #5c6980;
+  text-decoration: none;
+}
+/*
+ ========    end header
+ ========    start content
+ */
+.content {
+  grid-area: content;
+  /* background-color: #f3f3f3; */
+  width: 1080px;
+  height: 600px;
+  margin: 20px auto;
+  padding: 10px;
+}
+.content .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.content .grupcard {
+  display: flex;
+  justify-content: center;
+}
+.content .grupcard .card {
+  background-color: #f3f3f3;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.content .grupcard .card img.color1,
+.content .grupcard .card img.color2,
+.content .grupcard .card img.color3 {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px 10px 0 0;
+
+}
+.content .grupcard .card img.color1 {
+  background: linear-gradient(#35c9f7, #65edd5);
+}
+.content .grupcard .card img.color2 {
+  background: linear-gradient(#fc7267, #f0de92);
+}
+.content .grupcard .card img.color3 {
+  background: linear-gradient(#916efc, #e381f0);
+}
+
+.content .grupcard .card .card-body {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.content .grupcard .card .card-body .card-title {
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+}
+.content .grupcard .card .card-body .card-text {
+  padding: 10px 15px;
+}
+.content .grupcard .card .card-body .btn {
+  color: #fff;
+  font-size: 18px;
+  background-color: #333;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/*
+ ========    end content
+ ========    start footer
+ */
+footer {
+  grid-area: footer;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .block {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #4da3f7;
+  margin: 10px;
+  border-radius: 5px;
+}
+footer .subscription {
+  color: #fff;
+}
+footer .subscription p {
+  margin-bottom: 10px;
+}
+footer .subscription a {
+  color: #fff;
+  padding: 10px;
+}
